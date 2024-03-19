@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>STARF</title>
+    <link rel="stylesheet" href="seccion.css">
+</head>
+
+<body>
+    <div class="sidebar" id="sidebar">
+        <h2>Administración</h2>
+        <ul>
+            <li class="dropdown">
+                <a href="#">Personal</a>
+                <ul class="dropdown-content">
+                    <li><a href="profesor.html">Profesor</a></li>
+                    <li><a href="administrador.html">Administrador</a></li>
+                </ul>
+            </li>
+            <li><a href="estudiante.html">Estudiante</a></li>
+            <li><a href="seccion.html">Secciones</a></li>
+            <li><a href="materia.html">Materias</a></li>
+            <li class="dropdown">
+                <a href="#">Horarios</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Crear Jornada</a></li>
+                    <li><a href="#">Administrar Jornada</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Tomar asistencia STARF</a></li>
+            <li class="dropdown">
+                <a href="#">Reportes</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">En Tiempo Real</a></li>
+                    <li><a href="#">Normal</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <button id="menu-toggle">&#9776;</button>
+
+    <div class="main-content">
+        <form id="formulario-seccion" class="create-subject">
+            <h1>Crear secciones</h1>
+            <label for="letra">Letra:</label>
+            <input type="text" id="letra" name="letra" maxlength="1" required>
+
+            <label for="id_seccion">ID de sección:</label>
+            <input type="number" id="id_seccion" name="id_seccion" required>
+            <br>
+            <label for="año">Año:</label>
+            <select id="año" name="año">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            </select>
+            <br>
+            <button type="submit">Crear sección</button>
+        </form>
+
+        <form id="formulario-asignar" class="assign-subject">
+            <h2>Asignar alumno</h2>
+            <label for="id_seccion_asignar">ID sección:</label>
+            <input type="number" id="id_seccion_asignar" name="id_seccion_asignar" required>
+            <br>
+            <label for="nit">NIT:</label>
+            <input type="number" id="nit" name="nit" required>
+            <br>
+            <button type="submit">Asignar alumno</button>
+        </form>
+
+    </div>
+
+    <script>
+        document.getElementById('formulario-seccion').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Aquí va el código para crear la sección
+            console.log('Sección creada:', event.target.letra.value, event.target.id_seccion.value, event.target.año.value);
+        });
+        document.getElementById('formulario-asignar').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Aquí va el código para asignar al alumno
+            console.log('Alumno asignado:', event.target.id_seccion_asignar.value, event.target.nit.value);
+        });
+    </script>
+    <script src="menu.js"></script>
+</body>
+
+</html>

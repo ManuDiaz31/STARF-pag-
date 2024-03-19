@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STARF</title>
+    <link rel="stylesheet" href="materia.css">
+</head>
+
+<body>
+    <div class="sidebar" id="sidebar">
+        <h2>Administración</h2>
+        <ul>
+            <li class="dropdown">
+                <a href="#">Personal</a>
+                <ul class="dropdown-content">
+                    <li><a href="profesor.html">Profesor</a></li>
+                    <li><a href="administrador.html">Administrador</a></li>
+                </ul>
+            </li>
+            <li><a href="estudiante.html">Estudiante</a></li>
+            <li><a href="seccion.html">Secciones</a></li>
+            <li><a href="materia.html">Materias</a></li>
+            <li class="dropdown">
+                <a href="#">Horarios</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Crear Jornada</a></li>
+                    <li><a href="#">Administrar Jornada</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Tomar asistencia STARF</a></li>
+            <li class="dropdown">
+                <a href="#">Reportes</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">En Tiempo Real</a></li>
+                    <li><a href="#">Normal</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <button id="menu-toggle">&#9776;</button>
+
+    <div class="main-content">
+        <div class="create-subject">
+            <h2>Crear Materias</h2>
+            <label for="subject-name">Nombre Materia:</label>
+            <input type="text" id="subject-name">
+
+            <label for="subject-id">ID Materia:</label>
+            <input type="text" id="subject-id">
+            <br>
+            <button class="blue-button">Crear Materias</button>
+        </div>
+
+        <div class="assign-subject">
+            <h2>Asignar Materias</h2>
+            <label for="professor-id">ID Profesor:</label>
+            <input type="text" id="professor-id">
+
+            <label for="subject-id">ID Materia:</label>
+            <input type="text" id="subject-id">
+            <br>
+            <button class="blue-button">Asignar Materias</button>
+        </div>
+
+    </div>
+
+    <script src="menu.js"></script>
+</body>
+
+</html>

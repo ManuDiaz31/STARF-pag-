@@ -1,0 +1,222 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #001529;
+    padding-top: 20px;
+}
+
+.sidebar h2 {
+    color: white;
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar ul li a:hover {
+    background-color: #00274C;
+    padding: 5px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #015baf;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px #41018a;
+    z-index: 2;
+}
+
+.dropdown-content a {
+    color: #5e7285;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* Estilos para el formulario */
+
+form {
+    max-width: 700px;
+    display: flex;
+}
+
+
+/* Estilos para cada columna */
+
+.column {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Estilos para los campos de texto y el botón de enviar */
+
+input[type="text"],
+input[type="email"],
+input[type="file"],
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #5a3535;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+
+/* Estilos para el botón de enviar */
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 2px;
+}
+
+
+/* Estilos para el botón de enviar al pasar el cursor */
+
+input[type="submit"]:hover {
+    background-color: #31c238;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #44e94c;
+}
+
+
+/* Estilos para la vista previa de la imagen */
+
+#file-container {
+    position: relative;
+}
+
+#file-preview {
+    width: 130px;
+    /* Ancho de la imagen previa */
+    /* Modifica aquí para ajustar el tamaño de la vista previa de la imagen */
+    height: 130px;
+    /* Altura de la imagen previa */
+    /* Modifica aquí para ajustar el tamaño de la vista previa de la imagen */
+    border-radius: 10px;
+    /* Borde redondeado */
+    position: none;
+    /* Posición absoluta */
+    top: 50%;
+    /* Centrar verticalmente */
+    left: -0px;
+    /* Mover hacia la izquierda */
+    /* Ajusta aquí para mover la vista previa de la imagen */
+    transform: translateY(-50%);
+    /* Centrar verticalmente */
+    display: none;
+    /* Ocultar inicialmente */
+    margin-top: 60px;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .sidebar {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        height: 100%;
+        width: 250px;
+        top: 0;
+        left: 0;
+        background-color: #001529;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+    .sidebar.open {
+        display: block;
+    }
+    .sidebar ul li {
+        padding: 10px 20px;
+    }
+    .sidebar ul li a {
+        display: block;
+        color: white;
+        text-decoration: none;
+    }
+    .sidebar ul li a:hover {
+        background-color: #00274C;
+    }
+    main {
+        margin-left: 0;
+        padding: 1rem;
+    }
+    #menu-toggle {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: transparent;
+        color: #5f5757;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 2;
+    }
+}
+
+
+/* Media queries para hacer que el formulario sea responsive */
+
+@media screen and (max-width: 600px) {
+    form {
+        padding: 5%;
+        flex-direction: column;
+    }
+    .column {
+        padding: 0;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="file"],
+    input[type="submit"] {
+        margin-bottom: 20px;
+    }
+    #file-preview {
+        margin-top: 60px;
+    }
+}
