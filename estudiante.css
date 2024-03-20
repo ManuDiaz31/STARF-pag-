@@ -146,6 +146,10 @@ form {
     /* Alinear elementos en columna */
 }
 
+.create-subject {
+    float: right;
+    font-size: 13px
+}
 
 /* Estilos para los campos de texto y el botón de enviar */
 
@@ -166,7 +170,10 @@ input[type="submit"] {
     box-sizing: border-box;
     /* Tamaño incluyendo el borde y el relleno */
 }
-
+.create-subject {
+    float: right;
+    font-size: 13px
+}
 
 /* Estilos para el botón de enviar */
 
